@@ -1,0 +1,21 @@
+
+<div class="card">
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"> ¡Cambia tu nickname!
+            <i class="material-icons right" [routerLink]="['/']">close</i>
+        </span>
+        <div class="row">
+            <div class="input-field col s10">
+                <input id="nickname" [(ngModel)]="newNickname" type="text" type="text">
+                <label for="nickname">Ingresa tu nuevo nickname</label>
+            </div>
+            <div class="input-field col s2">
+                <button class="btn waves-effect waves-light" (click) = "updateNickname()"> 
+                    Actualizar nickname
+                    <i class="material-icons right">send</i> 
+                </button>
+            </div>
+            <span class="left" *ngIf = "userUpdated"> <strong>Usuario actualizado con éxito</strong> </span>
+        </div>
+    </div>
+</div>
