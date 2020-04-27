@@ -26,7 +26,6 @@ export class ChatConversationComponent implements OnInit {
   }
   
   ngOnInit() {
-    //localStorage.removeItem("user");
     this.nicknameid = this.makeid();
     this.chatService.userInfo.nickname = this.chatService.userInfo.nickname ? this.chatService.userInfo.nickname : localStorage.getItem("user") ? localStorage.getItem("user") :`user${this.nicknameid}`;
     this.chatService.messageData.nickname = this.chatService.userInfo.nickname;
